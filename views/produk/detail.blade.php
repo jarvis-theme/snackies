@@ -169,7 +169,7 @@
                                     <li><span>Brand:</span> {{$produk->vendor}}</li>
                                 </ul>
                             </div>
-                            <div class="tab-pane fade" id="review">{{pluginTrustklik()}}</div>
+                            <div class="tab-pane fade" id="review">{{ pluginComment(product_url($produk), @$produk) }}</div>
                         </div>
                     </div>
 

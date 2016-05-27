@@ -70,7 +70,9 @@
                     <div class="widget widget-subs">
                         <ul class="card-icons">
                             @foreach(list_banks() as $value)
-                            <li>{{HTML::image(bank_logo($value), $value->bankdefault->nama, array('title'=>$value->bankdefault->nama))}}</li>
+                                @if($value->status == 1)
+                                <li>{{HTML::image(bank_logo($value), $value->bankdefault->nama, array('title'=>$value->bankdefault->nama))}}</li>
+                                @endif
                             @endforeach
                             @foreach(list_payments() as $pay)
                                 @if($pay->nama == 'paypal' && $pay->aktif == 1)
