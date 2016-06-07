@@ -4,9 +4,9 @@
 <!-- CSS styles  -->
 {{generate_theme_css('snackies/assets/css/bootstrap.min.css')}}  
 @if($tema->isiCss=='')
-	{{generate_theme_css('snackies/assets/css/style.css')}}  
+	{{generate_theme_css('snackies/assets/css/style.css?v=001')}}  
 @else
-	{{generate_theme_css('snackies/assets/css/editstyle.css')}}  
+	{{generate_theme_css('snackies/assets/css/editstyle.css?v=001')}}  
 @endif
 {{generate_theme_css('snackies/assets/css/responsive.css')}}  
 {{generate_theme_css('snackies/assets/css/animate.css')}}  
