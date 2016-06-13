@@ -4326,3 +4326,4 @@ form[name="order"] > input[name="SAVE"]:hover {
 .table-responsive { overflow-x: auto; }
 .btn-pay { background: #00aee7; border: none; padding: 10px; color: #fff }
 .btn-pay:hover { cursor: pointer; opacity: 0.7 }
+.flexslider .slides img { max-height: 450px; }

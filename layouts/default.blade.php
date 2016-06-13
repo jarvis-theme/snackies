@@ -16,7 +16,7 @@
             </div>
             {{ Theme::partial('footer') }} 
         </div>
+        {{ Theme::partial('defaultjs') }} 
+        {{ Theme::partial('analytic') }} 
     </body>
-    {{ Theme::partial('defaultjs') }} 
-    {{ Theme::partial('analytic') }} 
 </html>
