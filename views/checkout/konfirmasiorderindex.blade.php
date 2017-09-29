@@ -21,13 +21,13 @@
                     <div class="section carousel-iframe">
                         <div class="container">
                             <div class="row carousel-iframe offer">
-                                <div class="col-xs-12 col-lg-6 col-lg-offset-3">
+                                <div class="col-xs-12 col-lg-6 col-lg-offset-3 center">
                                     <h4 class="section-title">Konfirmasi Pembayaran</h4>
                                     <div class="section">
                                         <p>Silakan masukkan kode order yang mau anda cari!</p>
-                                        {{Form::open(array('url'=>'konfirmasiorder','method'=>'post','class'=>'form-horizontal contact'))}}
+                                        {{Form::open(array('url'=>'konfirmasiorder','method'=>'post','class'=>'form-horizontal form-confirm'))}}
                                             <div class="form-group">
-                                                <div class="col-xs-12 col-sm-12 col-md-9">
+                                                <div class="col-xs-12 col-sm-12 col-md-9 code-number">
                                                     <input type="text" class="form-control" placeholder="Kode Order" name="kodeorder" placeholder="Nama" required>
                                                 </div>
                                             </div>

@@ -23,7 +23,7 @@
                         <h4 class="section-title">My Account</h4>
                         <div class="section-inner">
                             <a class="product-link clearfix" href="{{URL::to('member')}}">Order History</a>
-                            <a class="product-link clearfix" href="{{URL::to('member/'.$user->id.'/edit')}}">Profil Information</a>
+                            <span class="product-link clearfix active">Profil Information</span>
                         </div>
                     </div>
 
@@ -45,52 +45,52 @@
                     {{Form::open(array('url'=>'member/update','method'=>'put','class'=>'form-horizontal'))}}
                         <h2>Informasi Umum</h2>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="required">*</span> Nama:</label>
-                            <div class="col-sm-10">
+                            <label class="col-sm-3 control-label"><span class="required">*</span> Nama:</label>
+                            <div class="col-sm-9">
                                 <input type="text" class="form-control" name="nama" value="{{$user->nama}}" autofocus required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="required">*</span> Email:</label>
-                            <div class="col-sm-10">
+                            <label class="col-sm-3 control-label"><span class="required">*</span> Email:</label>
+                            <div class="col-sm-9">
                                 <input type="email" class="form-control" name="email" value="{{$user->email}}" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="required">*</span> Telepon:</label>
-                            <div class="col-sm-10">
+                            <label class="col-sm-3 control-label"><span class="required">*</span> Telepon:</label>
+                            <div class="col-sm-9">
                                 <input type="number" class="form-control" name="telp" value="{{$user->telp}}" required>
                             </div>
                         </div>
                         <h2>Informasi Alamat</h2>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="required">*</span> Alamat:</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" name="alamat" required>{{$user->alamat}}</textarea>
+                            <label class="col-sm-3 control-label"><span class="required">*</span> Alamat:</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" name="alamat" rows="3" required>{{$user->alamat}}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><span id="postcode-required" class="required">*</span>  Kode Pos:</label>
-                            <div class="col-sm-10">
+                            <label class="col-sm-3 control-label"><span id="postcode-required" class="required">*</span>  Kode Pos:</label>
+                            <div class="col-sm-9">
                                 <input type="number" class="form-control" name="kodepos" value="{{$user->kodepos}}" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="required">*</span> Negara</label>
-                            <div class="col-sm-10">
-                                {{Form::select('negara',array('' => '-- Pilih Negara --') + $negara, ($user ? $user->negara :(Input::old("negara")? Input::old("negara") :"")), array('required'=>'', 'id'=>'negara'))}}
+                            <label class="col-sm-3 control-label"><span class="required">*</span> Negara</label>
+                            <div class="col-sm-9">
+                                {{Form::select('negara',array('' => '-- Pilih Negara --') + $negara, ($user ? $user->negara :(Input::old("negara")? Input::old("negara") :"")), array('required'=>'', 'id'=>'negara','class'=>'col-lg-7 col-xs-12'))}}
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="required">*</span> Provinsi</label>
-                            <div class="col-sm-10">
-                                {{Form::select('provinsi',array('' => '-- Pilih Provinsi --') + $provinsi, ($user ? $user->provinsi :(Input::old("provinsi")? Input::old("provinsi") :"")),array('required'=>'','id'=>'provinsi'))}}                         
+                            <label class="col-sm-3 control-label"><span class="required">*</span> Provinsi</label>
+                            <div class="col-sm-9">
+                                {{Form::select('provinsi',array('' => '-- Pilih Provinsi --') + $provinsi, ($user ? $user->provinsi :(Input::old("provinsi")? Input::old("provinsi") :"")),array('required'=>'','id'=>'provinsi','class'=>'col-lg-7 col-xs-12'))}}
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="required">*</span> Kabupaten</label>
-                            <div class="col-sm-10">
-                                {{Form::select('kota',array('' => '-- Pilih Kota --') + $kota, ($user ? $user->kota :(Input::old("kota")? Input::old("kota") :"")),array('required'=>'','id'=>'kota'))}}
+                            <label class="col-sm-3 control-label"><span class="required">*</span> Kota</label>
+                            <div class="col-sm-9">
+                                {{Form::select('kota',array('' => '-- Pilih Kota --') + $kota, ($user ? $user->kota :(Input::old("kota")? Input::old("kota") :"")),array('required'=>'','id'=>'kota','class'=>'col-lg-7 col-xs-12'))}}
                             </div>
                         </div>
                         <h2>Ganti Password</h2>

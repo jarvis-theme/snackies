@@ -57,13 +57,15 @@
                                 <div class="description">
                                     <div class="cat-image"><h2 class="blogtitle">{{$value->judul}}</h2></div>
                                     <small><i class="icon-calendar5"></i> {{waktuTgl($value->created_at)}}</small>
-                                    <br><br>               
-                                    {{ blogIndex($value->isi,250) }}
+                                    <img src="{{ imgString($value->isi) }}" class="blog" />
+                                    <div>
+                                        {{ blogIndex($value->isi,250) }}
+                                    </div>
                                 </div>
                             </div>
                         </a>
                         @endforeach 
-                        <div class="clearfix "></div>   
+                        <div class="clearfix "></div>
                         {{ list_blog(null, @$blog_category)->links() }}
                     </div>
                 </div>

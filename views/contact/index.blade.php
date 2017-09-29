@@ -24,7 +24,7 @@
                             <div class="widget-inner iconlist">
                                 <div class="media">
                                     <div class="pull-left">
-                                        <i class="icon-location"></i>
+                                        <i class="icon-location" style="top: 7px;"></i>
                                     </div>
                                     <div class="media-body">
                                         <p>{{$kontak->nama}}, <br/>{{$kontak->alamat}}</p>
@@ -32,7 +32,7 @@
                                 </div>
                                 <div class="media">
                                     <div class="pull-left">
-                                        <i class="icon-phone"></i>
+                                        <i class="icon-phone" style="top: 7px;"></i>
                                     </div>
                                     <div class="media-body">
                                         <p>{{$kontak->telepon}}<br/>{{$kontak->hp}}</p>

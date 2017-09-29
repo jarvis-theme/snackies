@@ -3430,7 +3430,7 @@ input[type="text"].error,input[type="email"].error,input[type="password"].error,
 	}
 	.my-cart thead th {
 		text-transform: uppercase;
-		text-align: center;
+		/*text-align: center;*/
 		padding: 13px 10px;
 		font-weight: 600;
 	}
@@ -3439,7 +3439,7 @@ input[type="text"].error,input[type="email"].error,input[type="password"].error,
 	}
 	.my-cart tbody td {
 		padding: 20px 10px;
-		text-align: center;
+		/*text-align: center;*/
 	}
 
 		/** Table headings */
@@ -3478,7 +3478,7 @@ input[type="text"].error,input[type="email"].error,input[type="password"].error,
 		/** Product quantity */
 		.my-cart .qty-btngroup {
 			margin: 0 auto;
-			display: table;
+			/*display: table;*/
 		}
 		.qty-btngroup button,
 		.qty-btngroup input[type="text"] {
@@ -4160,7 +4160,7 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, .form-control, button {
 .fb_reset {display: inline-block;}
 .fb-share-button {top: -5px; margin: 0 10px 0 15px;}#myTab{height: auto}
 .blog-time{ margin-left: 20px; font-style: italic; color: #3f3e3e }.dateblog{margin:8px}
-.zerotop{margin-top: 0}#rek{width: 40%}#reklist{width: 100%}
+.zerotop{margin-top: 0}#reklist{width: 100%}
 .right{text-align: right}.left{text-align: left}.image-prod{min-height: 199px}.noresult{text-align: center; border: 0}
 .maplocation{float:right;width:100%}.nodisplay{display: none}#imgprod{min-height:123px !important}
 .sidebarnav{border-bottom: solid 1px;border-bottom-color: #f38256; border-top: 0px}.side-contact{line-height: 2}
@@ -4174,7 +4174,7 @@ body, h1, h2, h3, h4, h5, h6, input, select, textarea, .form-control, button {
 #top-search { width: 100% }
 .breadcrumbs ul.unstyled { border-bottom: 1px solid #B4B2B3; padding-bottom: 10px }
 .banner-show:first-child { margin-top: 0 }
-.banner-show { margin-top: 10px }
+.banner-show { margin-top: 10px; text-align: center; }
 #detail ul { padding-left: 22px }
 .carousel-iframe h4 { font-style: italic; }
 .plugin form input[type="text"] { width: 100% !important }
@@ -4327,3 +4327,17 @@ form[name="order"] > input[name="SAVE"]:hover {
 .btn-pay { background: #00aee7; border: none; padding: 10px; color: #fff }
 .btn-pay:hover { cursor: pointer; opacity: 0.7 }
 .flexslider .slides img { max-height: 450px; }
+select[name="opsiproduk"] { display: block; }
+.testimonials .name { display: inline; font-weight: bold; }
+.testimonials .user { padding: 10px 0; }
+.sidebar .active { font-weight: bold; }
+.form-confirm .code-number { float: none; display: inline-block; }
+.table-order ul { padding-left: 15px; }
+.label-important {
+    background-color: #d9534f;
+}
+.form-reset {
+	text-align: center;
+}
+.form-reset button { line-height: 17px; }
+img.blog { margin: 10px 0; }

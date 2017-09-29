@@ -119,7 +119,6 @@
                                             <s class="orginal-price"> {{ price($produk->hargaCoret) }} </s>
                                             @endif
                                         </div>
-                                        <br>
                                         <form action="#" id="addorder">
                                             @if($opsiproduk->count() > 0)
                                             Opsi : <select name="opsiproduk">
@@ -129,12 +128,11 @@
                                                 </option>
                                                 @endforeach
                                             </select>
+                                            <div class="space30 clearfix"></div>
                                             @endif
                                             
-                                            <div class="space30 clearfix"></div>
-
                                             <div class="clearfix">
-                                                Jumlah : <input type="text" class="qty compact" name="qty" value="1" size="2" id="qty-input">
+                                                Jumlah : <input type="text" class="qty compact center" name="qty" value="1" size="2" id="qty-input" pattern="[0-9]">
                                             </div>
                                             
                                             <div class="space30 clearfix"></div>
@@ -165,8 +163,8 @@
                             <div class="tab-pane fade" id="detail">
                                 <ul>
                                     <li><span>Berat:</span> {{$produk->berat}} gram</li>
-                                    <li><span>Stok:</span> {{$produk->stok}}</li>
-                                    <li><span>Brand:</span> {{$produk->vendor}}</li>
+                                    <li><span>Stok:</span> {{$produk->stok < 0 ? 0 : $produk->stok}}</li>
+                                    <li><span>Brand:</span> {{!empty($produk->vendor) ? $produk->vendor : "-"}}</li>
                                 </ul>
                             </div>
                             <div class="tab-pane fade" id="review">{{ pluginComment(product_url($produk), @$produk) }}</div>

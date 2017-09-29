@@ -57,13 +57,11 @@
                             @if($kontak->ym)
                             <div class="media">
                                 <div class="media-body">
-                                    <p>{{ymyahoo(@$kontak->ym)}}</p>
                                 </div>
                             </div>
                             @endif
                         </div>
                     </div>
-                    <div class="space40 hidden-lg"></div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-lg-12">
@@ -88,9 +86,11 @@
                             @if(count(list_dokus()) > 0 && list_dokus()->status == 1)
                             <li><img src="{{URL::to('img/bank/doku.jpg')}}" alt="support doku myshortcart" title="Doku" /></li>
                             @endif
+                            @if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
+                            <li><img src="{{url('img/bank/midtrans.png')}}" alt="Midtrans" title="Midtrans"></li>
+                            @endif
                         </ul>
                     </div>
-                    <div class="space40 hidden-lg"></div>
                 </div>
             </div>
         </div>

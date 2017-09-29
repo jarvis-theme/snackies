@@ -19,7 +19,7 @@
             <div class="col-xs-12 col-sm-4 col-lg-3 pull-left sidebar">
                 <div class="accordionmenu section">
                     <h4 class="section-title">My Account</h4>
-                    <a class="product-link clearfix" href="{{URL::to('member')}}">Order History</a>
+                    <span class="product-link clearfix active">Order History</span>
                     <a class="product-link clearfix" href="{{URL::to('member/'.$user->id.'/edit')}}">Profil Information</a>
                 </div>
                 
@@ -55,7 +55,7 @@
                                 <td>
                                     <div>
                                         @if($item->status!=2 || $item->status!=3)
-                                        <a href="{{URL::to('konfirmasipreorder/'.$item->id)}}">
+                                        <a href="{{URL::to('konfirmasiorder/'.$item->id)}}">
                                         @else
                                         <a>
                                         @endif
@@ -87,15 +87,15 @@
                                 <td>
                                     <span>{{ $item->noResi }}</span>
                                 </td>
-                                <td>
+                                <td class="center">
                                     @if($item->status == 0)
-                                    <a href="{{URL::to('konfirmasiorder/'.$item->id)}}" title="Konfirmasi Order"><span class="icon-cart"></span></a>
+                                    <a href="{{URL::to('konfirmasiorder/'.$item->id)}}" title="Konfirmasi Order"><span class="icon-profile"></span></a>
                                     @elseif($item->status == 1)
-                                    <span class="icon-file3"></span>
+                                    <span class="icon-file3" title="Konfirmasi Diterima"></span>
                                     @elseif($item->status == 2)
-                                    <span class="icon-checkmark"></span>
+                                    <span class="icon-checkmark" title="Pembayaran Diterima"></span>
                                     @elseif($item->status == 3)
-                                    <span class="icon-gift"></span>
+                                    <span class="icon-gift" title="Barang Terkirim"></span>
                                     @endif
                                 </td>
                             </tr>

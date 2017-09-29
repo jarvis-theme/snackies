@@ -33,15 +33,13 @@
 
                 <div class="col-xs-12 col-sm-8 col-lg-9 main">
                     <div class="section">
-                        <div id="checkout-accordion" class="checkout accordion">
+                        <div class="testimonials accordion">
                             @foreach(list_testimonial() as $key=>$value)
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#checkout-accordion" href="#collapse6">
-                                        <span class="text-bold"><i class="icon-compose"></i>{{ $value->nama }}&nbsp;~</span>&nbsp;<small>{{ waktuTgl($value->created_at) }}</small><br>
-                                         &#187;&nbsp;{{ $value->isi }}
-                                    </a>
-                                </div>
+                            <div class="user">
+                                <span class="text-bold">
+                                    <i class="icon-compose"></i><h5 class="name">{{ $value->nama }}</h5><br>
+                                    &#187;&nbsp;{{ $value->isi }}
+                                </span>
                             </div>
                             @endforeach
                         </div>

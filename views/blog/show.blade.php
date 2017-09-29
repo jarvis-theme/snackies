@@ -53,7 +53,12 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 section">
                             <div class="cat-image"><h1 class="section-title">{{$detailblog->judul}}</h1></div>
-                            <small class="dateblog"><i class="icon-calendar5"></i> {{waktuTgl($detailblog->created_at)}} <span>&nbsp;&nbsp; <i class="icon-tag"></i>&nbsp;<a href="{{URL::to('blog/category/'.$detailblog->kategori->nama)}}">{{$detailblog->kategori->nama}}</a></span></small>
+                            <small class="dateblog">
+                                <i class="icon-calendar5"></i> {{waktuTgl($detailblog->created_at)}}
+                                @if(!empty($detailblog->kategori->nama))
+                                <span>&nbsp;&nbsp;<i class="icon-tag"></i>&nbsp;<a href="{{URL::to('blog/category/'.$detailblog->kategori->nama)}}">{{$detailblog->kategori->nama}}</a></span>
+                                @endif
+                            </small>
                             <div class="share-blog">
                                 {{sosialShare(blog_url($detailblog))}}
                             </div>
